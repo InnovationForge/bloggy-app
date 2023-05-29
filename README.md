@@ -69,6 +69,70 @@ Additionally, you may need to consider other supporting components, such as form
 
 This structure provides a basic outline for building the blogging platform with user authentication, post creation, editing, and deletion functionalities. Feel free to adapt and expand upon this structure based on your specific project requirements.
 
+## Folder structure overview
+In the typical Angular project structure, the components, services, models, guards, and other related folders would be inside the src/app directory. The app directory is the root directory for your Angular application.
+
+```css
+src
+└── app
+    ├── components
+    │   ├── registration
+    │   │   ├── registration.component.ts
+    │   │   ├── registration.component.html
+    │   │   ├── registration.component.css
+    │   │   └── ...
+    │   ├── login
+    │   │   ├── login.component.ts
+    │   │   ├── login.component.html
+    │   │   ├── login.component.css
+    │   │   └── ...
+    │   ├── posts
+    │   │   ├── post-list
+    │   │   │   ├── post-list.component.ts
+    │   │   │   ├── post-list.component.html
+    │   │   │   ├── post-list.component.css
+    │   │   │   └── ...
+    │   │   ├── post-details
+    │   │   │   ├── post-details.component.ts
+    │   │   │   ├── post-details.component.html
+    │   │   │   ├── post-details.component.css
+    │   │   │   └── ...
+    │   │   └── ...
+    │   ├── dashboard
+    │   │   ├── dashboard.component.ts
+    │   │   ├── dashboard.component.html
+    │   │   ├── dashboard.component.css
+    │   │   └── ...
+    │   ├── shared
+    │   │   ├── header
+    │   │   │   ├── header.component.ts
+    │   │   │   ├── header.component.html
+    │   │   │   ├── header.component.css
+    │   │   │   └── ...
+    │   │   ├── footer
+    │   │   │   ├── footer.component.ts
+    │   │   │   ├── footer.component.html
+    │   │   │   ├── footer.component.css
+    │   │   │   └── ...
+    │   │   └── ...
+    │   └── ...
+    ├── services
+    │   ├── auth.service.ts
+    │   ├── post.service.ts
+    │   ├── user.service.ts
+    │   ├── api.service.ts
+    │   └── ...
+    ├── models
+    │   ├── user.model.ts
+    │   ├── post.model.ts
+    │   └── ...
+    ├── guards
+    │   ├── auth.guard.ts
+    │   └── ...
+    └── ...
+
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
