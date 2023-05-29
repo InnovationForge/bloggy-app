@@ -132,6 +132,40 @@ src
     └── ...
 
 ```
+## Style Guide -  Bootstrap
+Step 1: Install Bootstrap Package
+Run the following command in your Angular project's root directory to install Bootstrap:
+```sh
+npm install bootstrap
+```
+Step 2: Import Bootstrap Styles
+Open the styles.scss file in the src directory and add the following line to import Bootstrap styles:
+```css
+@import '~bootstrap/dist/css/bootstrap.css';
+```
+This will import the compiled CSS file of Bootstrap into your application.
+
+Step 3: Add Bootstrap JavaScript (Optional)
+If you need to use Bootstrap's JavaScript components, such as modals or tooltips, you can add the Bootstrap JavaScript file to your application.
+
+Open the angular.json file in the root directory of your Angular project. In the "scripts" section, add the Bootstrap JavaScript file path:
+```json
+"scripts": [
+  "node_modules/bootstrap/dist/js/bootstrap.js"
+]
+```
+Step 4: Verify Bootstrap Integration
+To verify that Bootstrap is correctly integrated into your application, you can add a Bootstrap component to one of your existing Angular components.
+
+For example, open the app.component.html file and add a Bootstrap alert component:
+```html
+<div class="alert alert-primary" role="alert">
+  This is a Bootstrap alert.
+</div>
+```
+Run your Angular application with the ng serve command, and you should see the Bootstrap alert rendered with the appropriate styling.
+
+That's it! Bootstrap is now added and ready to be used in your Angular application. You can explore the Bootstrap documentation and start incorporating Bootstrap components and styles into your Angular templates.
 
 ## Development server
 
@@ -161,3 +195,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### Guard Implementation References
 * [CanActivate is deprecated. How to refactor](https://stackoverflow.com/questions/75816948/canactivate-is-deprecated-how-to-refactor)
+* [Style - startbootstrap-blog-post](https://github.com/StartBootstrap/startbootstrap-blog-post)
+* [Style - startbootstrap-blog-home](https://github.com/StartBootstrap/startbootstrap-blog-home)
