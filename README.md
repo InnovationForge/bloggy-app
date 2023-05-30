@@ -275,9 +275,30 @@ it is possible to add json-server as part of the development process so that ng 
 
 1. Install concurrently package:
 Run the following command to install the concurrently package as a development dependency in your Angular project:
+```sh
+npm install --save-dev concurrently
+```
 2. Update the scripts section in package.json:
 Modify the scripts section in your package.json file to include a new script that starts both ng serve and json-server. Here's an example:
+```json
+"scripts": {
+  "start": "concurrently \"ng serve\" \"json-server --watch db.json\""
+}
+```
+In the above configuration, concurrently is used to run two commands in parallel: ng serve for starting the Angular development server and json-server for running the JSON stub server.
 
+3. Start the development server:
+To start the development server along with the JSON server, run the following command:
+```sh
+npm start
+```
+This will execute the start script defined in the package.json file, which in turn will start both the Angular app and the JSON server concurrently.
+
+Now, when you run npm start, it will start your Angular app using ng serve and also launch the JSON server using json-server. This allows you to develop and test your app while having the JSON stub server running in the background to simulate API responses.
+
+Please note that you need to make sure the db.json file is present in your project's root directory and contains the necessary data for the JSON server to serve. Adjust the script or db.json path as needed based on your project structure.
+
+Remember to use this setup only for development purposes, as the JSON stub server is not intended for production use.
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
